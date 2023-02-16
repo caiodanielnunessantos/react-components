@@ -22,5 +22,5 @@ export function TimedMessages({ messages, repeat }: ITimedMessages) {
       }, messages[index][0]);
     }
   }, [index]);
-  return (message);
+  return (<>{message}</>);
 }
