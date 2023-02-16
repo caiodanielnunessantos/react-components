@@ -1,12 +1,12 @@
 import React from 'react';
 
 interface ITimedMessages {
-  messages: [number, React.ReactElement][],
+  messages: [number, React.ReactNode][],
   repeat: boolean,
 }
 
 export function TimedMessages({ messages, repeat }: ITimedMessages) {
-  const [message, set_message] = React.useState<React.ReactElement | null>(null);
+  const [message, set_message] = React.useState<React.ReactNode>(null);
   const [index, set_index] = React.useState(0);
   React.useEffect(() => {
     if (index >= messages.length) {
