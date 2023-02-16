@@ -1,29 +1,28 @@
 {
-  "name": "@caiodanielnunessantos/react-components",
-  "author": "Caio Daniel Nunes Santos <caio.daniel.nunes.santos> (http://github.com/caiodanielnunessantos)",
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\""
-  },
-  "peerDependencies": {
-    "react": "^16.8.0 || 17.x",
-    "react-dom": "^16.8.0 || 17.x",
-    "styled-components": "^5.0.0"
-  },
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/my-lib.umd.js",
-  "module": "./dist/my-lib.es.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/my-lib.es.js",
-      "require": "./dist/my-lib.umd.js"
+    "name": "@caiodanielnunessantos/react-components",
+    "version": "1.0.4",
+    "repository": "https://github.com/caiodanielnunessantos/react-components",
+    "description": "",
+    "main": "dist/index.cjs.js",
+    "module": "dist/index.esm.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "node build.js && tsc --emitDeclarationOnly --outDir dist"
+    },
+    "keywords": [],
+    "author": "Caio Daniel Nunes Santos",
+    "license": "ISC",
+    "files": [
+        "dist"
+    ],
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.0.28",
+        "@types/react-dom": "^18.0.11",
+        "esbuild": "^0.17.8",
+        "typescript": "^4.9.5"
     }
-  }
 }
